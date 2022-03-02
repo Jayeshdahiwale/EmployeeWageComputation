@@ -12,19 +12,25 @@ public class Application {
 
 	
 	int a= (int)Math.floor(Math.random()*10)%3;
-	if(a==1) {
+	switch(a) {
+	case 1:
 		System.out.println("Employee is present");
 		
 		System.out.println("Daily Wage :Rs."+FULL_DAY_HOUR * WAGE_PER_HOUR);
-	}
-	else if(a==2) {
+		break;
+	
+	case 2:
 		System.out.println("Part Time Employee is present");
 		System.out.println("Daily Wage :Rs."+PARTIAL_DAY_HOUR * WAGE_PER_HOUR);
+		break;
+		
+	
+	
+	default:
+		System.out.println("Employee is absent");
+		break;
 	}
 	
-	else {
-		System.out.println("Employee is absent");
-	}
 	
 }
 }
